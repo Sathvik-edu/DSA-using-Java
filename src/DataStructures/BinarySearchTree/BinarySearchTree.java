@@ -66,6 +66,49 @@ public class BinarySearchTree {
         }
         return false;
     }
+    public void preorder() {
+        preorder(root);
+    }
+    void preorder(Node node) {
+        if (node == null)
+            return;
+
+        // traverse the root node
+        System.out.print(node.value + "->");
+        // traverse the left child
+        preorder(node.left);
+        // traverse the right child
+        preorder(node.right);
+    }
+
+    public void inorder() {
+        inorder(root);
+    }
+    void inorder(Node node) {
+        if (node == null)
+            return;
+        // traverse the left child
+        inorder(node.left);
+        // traverse the root node
+        System.out.print(node.value+ "->");
+        // traverse the right child
+        inorder(node.right);
+    }
+
+    public void postorder() {
+        postorder(root);
+    }
+
+    void postorder(Node node) {
+        if (node == null)
+            return;
+        // traverse the left child
+        postorder(node.left);
+        // traverse the right child
+        postorder(node.right);
+        // traverse the root node
+        System.out.print(node.value + "->");
+    }
 }
 
 
